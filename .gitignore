@@ -1,0 +1,14 @@
+target/
+**/*.rs.bk
+Cargo.lock
+.DS_Store
+.vscode/
+.idea/
+
+# Test corpus uitsluiten van Nibbles/Gorillas (lokaal, niet committen)
+tests/corpus/nibbles.bas
+tests/corpus/gorillas.bas
+tests/corpus/nibbles.exe
+tests/corpus/gorillas.exe
+tests/corpus/*.reconstructed.bas
+tests/corpus/stats.json
