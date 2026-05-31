@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QuickBasicEmulator_Decompiler Signature-DB",
+  "description": "Mapping van QB 4.5 runtime-function byte-patterns naar QB-statement-equivalent. Lokaal opgebouwd uit eigen BRUN45.EXE/BCOM45.LIB (BYO-BRUN45 policy, P-QBE-04).",
+  "type": "object",
+  "required": ["schema_version", "signatures"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "qb45_source_hash": {
+      "type": "string",
+      "description": "Hash van de BRUN45.EXE / BCOM45.LIB die deze DB heeft opgebouwd."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "signatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["function", "qb_statement", "pattern_hex"],
+        "properties": {
+          "function": {
+            "type": "string",
+            "description": "Internal runtime-function naam, bv. 'B$PRINT' / 'B$STRA' / 'B$LET'."
+          },
+          "qb_statement": {
+            "type": "string",
+            "description": "QB-source-level statement of function deze mapt naar."
+          },
+          "pattern_hex": {
+            "type": "string",
+            "pattern": "^[0-9A-F]+$",
+            "description": "Bytes-pattern in hex (uppercase, no spaces)."
+          },
+          "arg_signature": {
+            "type": "string",
+            "description": "Optionele arg-signature beschrijving."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 [package]
 name = "qbedec"
-version = "0.0.1"
+version = "0.0.4"
 edition = "2021"
 description = "Decompiler for QuickBASIC 4.5 .exe files (BRUN + Stand-alone modes)"
 license = "AGPL-3.0-or-later"
@@ -10,6 +10,10 @@ repository = "https://github.com/cpaglebbeek/QuickBasicEmulator_Decompiler"
 [[bin]]
 name = "qbedec"
 path = "src/main.rs"
+
+[lib]
+name = "qbedec"
+path = "src/lib.rs"
 
 [dependencies]
 clap = { version = "4.5", features = ["derive"] }

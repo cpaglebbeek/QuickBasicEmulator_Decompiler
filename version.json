@@ -1,7 +1,8 @@
 {
-  "version": "0.0.1",
-  "codename": "Gates",
-  "released": "2026-05-31",
+  "version": "0.0.4",
+  "codename": "Whitten",
+  "released": "2026-06-01",
   "stable": false,
-  "type": "skeleton"
+  "type": "decompiler-brun-mode-prototype",
+  "milestone": "PE/MZ parser + BRUN-detector (heuristic) + signature-DB schema + Rust AST + watermark — synthetic test-fixtures, no MS-binaries"
 }
