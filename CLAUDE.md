@@ -40,11 +40,3 @@ Conform B6-beslissing: `tests/corpus/` bevat publieke open-source QB-programs al
 | Signature-DB schema | `src/signatures/schema.rs` |
 | Test-corpus | `tests/corpus/` |
 
-## CI-status
-
-`.github/_workflows_pending/ci.yml` ligt klaar maar is nog niet actief op GitHub. Reden: bij eerste push had `gh` OAuth-token de `workflow` scope niet. Activeren met:
-```bash
-gh auth refresh -s workflow
-mv .github/_workflows_pending .github/workflows
-git add -A && git commit -m "Activate CI workflow" && git push
-```
